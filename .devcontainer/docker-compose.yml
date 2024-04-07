@@ -4,7 +4,7 @@ services:
   # sync devcontainer.json 'service'
   python3:
     # original container naame
-    container_name: python3.10-development
+    container_name: emergency-bot-container
     build:
       context: .
       dockerfile: Dockerfile

@@ -7,7 +7,7 @@
 
 
 ## Issue & PR rule
-- 機能追加 ： feat/
-- 改善 ： imprv/
-- バグ修正 ： fix/
-- その他 ： others/
+- 機能追加 ： Feat:
+- 改善 ： Imprv:
+- バグ修正 ： Fix:
+- その他 ： Others:

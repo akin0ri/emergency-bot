@@ -1,2 +1,2 @@
-pandas
-requsets
+pandas = 2.2.1
+requsets = 2.31.0

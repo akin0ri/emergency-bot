@@ -1,5 +1,7 @@
 import featch_api
 import store_date
+import pandas as pd
+import requests
 
 def main():
     #テストデータ

@@ -21,6 +21,7 @@ jobs:
   slackNotification:
     name: Slack-Notification
     runs-on: ubuntu-latest
+    needs: build
 
     steps:
     #-- Gitリポジトリの内容を取得 --#

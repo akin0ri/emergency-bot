@@ -3,3 +3,6 @@
 
 # ignore env file
 .env
+
+# ignore python cache file
+__pycache__

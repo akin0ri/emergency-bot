@@ -3,10 +3,6 @@ on:
   push:
     branches:
       - master
-env:
-  SLACK_USERNAME: DeployBot
-  SLACK_ICON: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 jobs:
   build:
@@ -26,6 +22,11 @@ jobs:
     name: Slack-Notification
     runs-on: ubuntu-latest
     needs: build
+
+    env:
+      SLACK_USERNAME: DeployBot
+      SLACK_ICON: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
 
     steps:
     #-- Gitリポジトリの内容を取得 --#

@@ -1,1 +1,1 @@
-web: gunicorn emergency-bot:app
+web: python work/manage.py runserver

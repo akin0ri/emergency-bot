@@ -1,4 +1,4 @@
-from pathlib import 
+from pathlib import Pathｆろｍ　ぱｔｈぃｂ　ｉｍぽｒｔ　
 import os
 
 #settings.pyからそのままコピー

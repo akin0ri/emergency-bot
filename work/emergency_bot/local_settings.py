@@ -1,4 +1,5 @@
-from pathlib import Path
+from pathlib import 
+import os
 
 #settings.pyからそのままコピー
 SECRET_KEY = 'django-insecure-*uw3^g!_okd#dv@a2%_jp=dzesx6$p+cj6t+si6au!jm0wfzpp'

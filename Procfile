@@ -1,1 +1,1 @@
-web: gunicorn /workspace/work/emergency_bot.wsgi --log-file -
+web: gunicorn --chdir /workspace/work/emergency_bot emergency_bot.wsgi

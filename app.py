@@ -111,13 +111,15 @@ def handle_message(event):
 def handle_location(event):
     with ApiClient(configuration) as api_client:
         line_bot_api = MessagingApi(api_client)
-        user_latitude = event.message.latitude
-        user_longitude = event.message.longitude
+        user_lat = event.message.latitude
+        user_lng = event.message.longitude
+        
+        url = f"https://www.google.com/maps/dir/?api=1&origin={user_lat},{user_lng}&destination={35.6807409},{139.7698834}&travelmode=walking"
 
         line_bot_api.reply_message(
             ReplyMessageRequest(
                 reply_token=event.reply_token,
-                messages=[TextMessage(text=f"緯度：{user_latitude}\n経度 : {user_longitude}")] 
+                messages=[TextMessage(text=url)] 
                 )
         )       
 

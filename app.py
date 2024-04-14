@@ -71,27 +71,26 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessageContent)
 def handle_message(event):
-    print('?'*10)
-    if event.message.text == "location":
+    if event.message.text == "emergency":
         with ApiClient(configuration) as api_client:
             line_bot_api = MessagingApi(api_client)
             items = [
                 QuickReplyItem(
                     action=LocationAction(
-                        label="Location",
-                        text="位置情報を送信する"
+                        label="位置情報を送信する",
+                        text="location"
                     
                     )
                 )
             ]
+            # set quick reply
             quick_reply = QuickReply(items=items)
-
             message=TextMessage(text='返信メッセージ', quickReply=quick_reply)
 
             line_bot_api.reply_message_with_http_info(
                         ReplyMessageRequest(
                             reply_token=event.reply_token,
-                            messages=[message]
+                            messages=[TextMessage(text=f"近くのAEDを調査するため現在地を送信してください"), message]
                         )
                     )
                 
@@ -102,7 +101,7 @@ def handle_message(event):
                 ReplyMessageRequest(
                     reply_token=event.reply_token,
                     # messages=[TextMessage(text=f"your position is {event.message.latitude} {event.message.longitude}")]
-                    messages=[TextMessage(text=f"hoge")]  
+                    messages=[TextMessage(text=f"hoge")]
                 )
             )
             
